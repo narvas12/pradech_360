@@ -1,15 +1,33 @@
 {
+    "version": 2,
     "builds": [
-        {
-            "src": "project/wsgi.py",
-            "use": "@vercel/python",
-            "config": {"maxLambdaSize": "15mb", "runtime": "python3.11"}
+      {
+        "src": "requirements.txt",
+        "use": "@vercel/python-build-step",
+        "config": {
+          "pipenv": false,
+          "pythonVersion": "3.9"
         }
+      },
+      {
+        "src": "*.{py,html}",
+        "use": "@vercel/python-build-step",
+        "config": {
+          "pipenv": false,
+          "pythonVersion": "3.9"
+        }
+      }
     ],
+    "env": {
+      "DJANGO_SETTINGS_MODULE": "project.settings",
+      "SECRET_KEY": "@django-insecure-3$iqvpem2pdl@01g5o5lmh6^0z56i!1#d6vs87h)cpg@wdg2+y",
+      "DATABASE_URL": "@https://github.com/narvas12/pradech_360/blob/main/db.sqlite3"
+    },
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "project/wsgi.py"
-        }
+      {
+        "src": "/(.*)",
+        "dest": "wsgi.py"
+      }
     ]
-}
+  }
+  
