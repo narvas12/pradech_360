@@ -19,9 +19,7 @@
       }
     ],
     "env": {
-      "DJANGO_SETTINGS_MODULE": "project.settings",
-      "SECRET_KEY": "@django-insecure-3$iqvpem2pdl@01g5o5lmh6^0z56i!1#d6vs87h)cpg@wdg2+y",
-      "DATABASE_URL": "@https://github.com/narvas12/pradech_360/blob/main/db.sqlite3"
+      "DJANGO_SETTINGS_MODULE": "project.settings"
     },
     "routes": [
       {
