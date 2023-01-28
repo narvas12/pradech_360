@@ -1,0 +1,154 @@
+
+
+{% extends 'base.html' %}
+
+{% block style %}
+.coler{
+  color: rgb(204, 134, 5);
+}
+
+.choice-row {
+    margin-top: 100px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-choice {
+    background-color: rgba(3, 27, 3, 0.842);
+  }
+  /* .container {
+    width: 80%;
+    background: rgba(0, 0, 14, 0.8);
+    padding-bottom: 30px;
+  } */
+
+  .show-form, .show-form1{
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .form-wrapps{
+    margin: 0 20px;
+  }
+
+  .popup {
+    display: none;
+    margin: 10px auto;
+    max-width: 600px;
+    color: blanchedalmond;
+    background-color: rgba(0, 14, 12, 0.89);
+    padding: 1.5rem;
+    font-family: "Trispace", sans-serif;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px 3px;
+    border: rgb(85, 4, 67);
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 17px;
+  }
+
+  input,
+  textarea,
+  select:focus {
+    outline: #570331;
+  }
+
+  label {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  textarea {
+    height: 100px;
+  }
+  input[type="submit"]{
+    color: aliceblue;
+    background-color: #581876;
+    transition-duration: 200ms;
+  }
+  input[type="submit"]:hover{
+    background-color: #12031a;
+    font-size: xx-large;
+  }
+  input[type="checkbox"],
+  input[type="radio"],
+  input[type="file"] {
+    width: 1;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    margin: 2.5em auto;
+    height: 2.5em;
+    font-size: 1.1rem;
+    border-color: white;
+    min-width: 300px;
+    border-radius: 5px;
+    transition-duration: 200ms;
+    border: rgba(0, 0, 14, 0.8);
+    background-color: #570331;
+  }
+  button:hover {
+    color: white;
+    background-color: #14031b;
+    height: 2.7em;
+  }
+
+  .input-checkbox,
+  .input-radio {
+    /* margin-bottom:0px; */
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+  }
+{% endblock style %}
+
+{% block form-control %}
+  <section class="form-choice">
+  <div class="choice-row">
+    <div class="form-wrapps">
+      <div class="coler">
+        <h1>For Partnership</h1>
+        <p>
+          For entertainment business people seeking collaboration | Join Our
+          Comunity and grow your market
+        </p>
+      </div>
+      <div class="center">
+        <a class="button" href="{% url 'partnership' %}"><button class="show-form" onclick="display_partnership()">
+          For Partnership
+        </button>
+      </a>
+      </div>
+      <div class="violet"></div>
+    </div>
+    <div class="form-wrapps">
+      <div class="coler">
+        <h1>For Creatives</h1>
+        <p>
+          For creators who want to grow | Join Our Comunity and grow your
+          Audience
+        </p>
+        <h4></h4>
+      </div>
+      <div class="center">
+        <a class="button" href="{% url 'creative' %}"><button  onclick="display_creatives()" class="show-form">
+          For Creatives
+        </button>
+      </a>
+      </div>
+      <div class="violet"></div>
+    </div>
+  </div>
+</section>
+{% endblock form-control %}

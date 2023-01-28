@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Radio Buttons</h2>
+
+<p>Choose your favorite Web language:</p>
+
+<form method="POST" action="{% url 'blog_entry' %}">
+    {% csrf_token %}
+  <input type="text" id="html" name="blog_title" value="title">
+  <label for="blog_title">Title</label><br>
+
+  <textarea type="text" id="css" name="article" value="article"></textarea>
+  <label for="article">Blog Article</label><br>
+
+  <input type="file" id="blog_image" name="Blog_image" value="Blog_image">
+  <label for="Blog_image">Blog_image</label>
+<input type="submit">
+</form> 
+
+</body>
+</html>
