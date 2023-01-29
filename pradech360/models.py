@@ -35,7 +35,7 @@ class For_creatives(models.Model):
     _user_Type = models.CharField(max_length=50)
     _obj = models.CharField(max_length=350)
     _how_you_heared_about_us = models.CharField(max_length=50)
-    campaign = models.CharField(max_length=50)
+    campaign = models.CharField(max_length=1000)
     _industry_type = models.CharField(max_length=50)
     sent_date = models.DateField(auto_now_add=True)
 
