@@ -11,6 +11,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  background-color: #343a409d;
 }
 
 a {
@@ -19,7 +20,7 @@ a {
 }
 
 a:hover {
-  color: #e76668;
+  color: #8b09c7;
   text-decoration: none;
 }
 
@@ -29,7 +30,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /*--------------------------------------------------------------
