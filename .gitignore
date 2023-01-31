@@ -1,4 +1,3 @@
 .vercel
-Lib/
-Scripts/
+
 *.sqlite3
