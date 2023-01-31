@@ -2,7 +2,7 @@
 
 #build project 
 echo "Building Priject..."
-python -m install -r requirements.txt
+pip install -r requirements.txt
 
 # echo "Make Migrations" 
 
